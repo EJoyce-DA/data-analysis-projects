@@ -10,20 +10,35 @@ flavors = {
 }
 
 ## Set a variable called choice to the flavor you want to search for.
-
+choice = 'cookies and cream'
 ## Use an if statement to check if choice is in the flavors dictionary.
+if 'cookies and cream' in flavors:
+    print('cookies and cream' in flavors)
+
+else:
+    cost = 0
+
 
 ## If it is, set another variable called cost to the value associated with choice.
+cost = flavors[choice]
 
 ## If it isn’t, set cost to 0.
 
 ## Print the cost.
+print(f'The cost of {choice} is {cost}.')
 
 ### Search a Dictionary Part 2:
 
 ## Initialize two variables: highest_cost to 0 and fanciest to an empty string.
+highest_cost = 0
+fanciest = ''
 
 ## Loop through the flavors dictionary using a for loop.
+for flavor in flavors:
+    if flavors[flavor] > highest_cost:
+        fanciest = flavor 
+        highest_cost = flavors[flavor]
+print(f'The most expensive flavor is {fanciest}, at {highest_cost} per scoop.')
 
 ## For each flavor, check if its price is higher than highest_cost.
 
